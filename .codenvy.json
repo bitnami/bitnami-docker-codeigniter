@@ -63,7 +63,7 @@
         }
       },
       {
-        "name": "1. Create project",
+        "name": "1. Create and run project",
         "type": "custom",
         "commandLine": "source /opt/bitnami/stacksmith-utils.sh && print_welcome_page && sudo HOME=/root /opt/bitnami/nami/bin/nami execute codeigniter createProject --force $(basename ${current.project.path}) | grep -v undefined && php -S 0.0.0.0:8000 -t ${current.project.path}",
         "attributes": {
@@ -78,7 +78,7 @@
         {
           "id": "runCommand",
           "properties": {
-            "name": "1. Create project"
+            "name": "1. Create and run project"
           }
         }
       ]
