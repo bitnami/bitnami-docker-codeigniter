@@ -1,12 +1,11 @@
 {
   "v": "4.0",
   "workspace": {
-    "name": "codeigniter-wss",
     "environments": {
-      "codeigniter-env": {
+      "default": {
         "recipe": {
-          "type": "dockerimage",
-          "location": "bitnami/che-codeigniter:che-3.1.0-r3"
+          "location": "bitnami/che-codeigniter:che-3.1.0-r3",
+          "type": "dockerimage"
         },
         "machines": {
           "ws-machine": {
@@ -15,13 +14,7 @@
               "org.eclipse.che.ws-agent",
               "org.eclipse.che.ssh"
             ],
-            "servers": {
-              "codeigniter": {
-                "port": "8000/tcp",
-                "protocol": "http",
-                "properties": {}
-              }
-            },
+            "servers": {},
             "attributes": {
               "memoryLimitsBytes": "1073741824"
             }
@@ -29,12 +22,13 @@
         }
       }
     },
-    "defaultEnv": "codeigniter-env",
+    "name": "bitnami-codeigniter",
+    "defaultEnv": "default",
     "projects": [
       {
-        "name": "codeigniter_sample",
+        "name": "codeigniter",
         "type": "blank",
-        "path": "/codeigniter_sample",
+        "path": "/codeigniter",
         "source": {
           "type": "git",
           "location": "https://github.com/bitnami/bitnami-docker-che-blank-sample.git",
