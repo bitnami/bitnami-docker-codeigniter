@@ -65,7 +65,7 @@
       {
         "name": "1. Create project",
         "type": "custom",
-        "commandLine": "source /opt/bitnami/stacksmith-utils.sh && print_welcome_page && sudo HOME=/root /opt/bitnami/nami/bin/nami execute codeigniter createProject --force codeigniter_sample | grep -v undefined && php -S 0.0.0.0:8000 -t ${current.project.path}",
+        "commandLine": "source /opt/bitnami/stacksmith-utils.sh && print_welcome_page && sudo HOME=/root /opt/bitnami/nami/bin/nami execute codeigniter createProject --force $(basename ${current.project.path}) | grep -v undefined && php -S 0.0.0.0:8000 -t ${current.project.path}",
         "attributes": {
            "previewUrl": "http://${server.port.8000}/"
         }
