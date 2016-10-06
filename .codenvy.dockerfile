@@ -3,7 +3,8 @@ FROM gcr.io/stacksmith-images/ubuntu-buildpack:14.04-r9
 MAINTAINER Bitnami <containers@bitnami.com>
 
 ENV BITNAMI_APP_NAME=codeigniter \
-    BITNAMI_APP_VERSION=3.1.0-2
+    BITNAMI_APP_VERSION=3.1.0-2 \
+    PATH=/opt/bitnami/php/bin:/opt/bitnami/mysql/bin/:$PATH
 
 # Install codeigniter related dependencies
 RUN bitnami-pkg install php-7.0.10-0 --checksum 5f2ec47fcfb2fec5197af6760c5053dd5dee8084d70a488fd5ea77bd4245c6b9
