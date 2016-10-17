@@ -24,4 +24,4 @@ WORKDIR /projects
 
 ENV TERM=xterm
 
-CMD ["sudo", "HOME=/root", "/opt/bitnami/nami/bin/nami", "start", "--foreground", "mariadb"]
+CMD ["/entrypoint.sh", "sudo", "HOME=/root", "/opt/bitnami/nami/bin/nami", "start", "--foreground", "mariadb"]
