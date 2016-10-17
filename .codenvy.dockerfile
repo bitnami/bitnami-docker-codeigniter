@@ -3,7 +3,7 @@ FROM gcr.io/stacksmith-images/ubuntu-buildpack:14.04-r10
 MAINTAINER Bitnami <containers@bitnami.com>
 
 ENV BITNAMI_APP_NAME=codeigniter \
-    BITNAMI_IMAGE_VERSION=3.1.0-r2 \
+    BITNAMI_IMAGE_VERSION=3.1.0-r4 \
     PATH=/opt/bitnami/php/bin:/opt/bitnami/mysql/bin/:$PATH
 
 # Install CodeIgniter dependencies
