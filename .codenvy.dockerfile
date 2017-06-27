@@ -17,7 +17,7 @@ RUN install_packages libc6 zlib1g libxslt1.1 libtidy-0.99-0 libreadline6 libncur
 # Install CodeIgniter dependencies
 RUN bitnami-pkg install php-7.0.20-0 --checksum 78181d1320567be07448e75e4783ce0269b433fc9e7ed8eff67abcff7f7327e9
 RUN bitnami-pkg install mysql-client-10.1.24-0 --checksum 3ac33998eefe09a8013036d555f2a8265fc446a707e8d61c63f8621f4a3e5dae
-RUN bitnami-pkg install mariadb-10.1.24-1 --checksum 0ad8567f9d3d8371f085b56854b5288be38c85a5cb3cd4e36d8355eb6bbbd4cd
+RUN bitnami-pkg install mariadb-10.1.24-1 --checksum 0ad8567f9d3d8371f085b56854b5288be38c85a5cb3cd4e36d8355eb6bbbd4cd -- --allowEmptyPassword yes
 
 # Install CodeIgniter module
 RUN bitnami-pkg install codeigniter-3.1.3-0 --checksum 5d653ed41a2bf4f78818f5cb2c249fba83b9f041ca72a8d7a5f7c9c6d9d51131 -- --applicationDirectory /projects
